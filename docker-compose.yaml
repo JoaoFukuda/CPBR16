@@ -1,0 +1,26 @@
+services:
+  site:
+    image: "nginx"
+    volumes:
+      - "${PWD}/site:/usr/share/nginx/html"
+    ports:
+      - "80:80"
+  desafio1:
+    image: "desafio1"
+    privileged: true
+    ports:
+      - "1330:5000"
+  desafio2:
+    image: "desafio2"
+    privileged: true
+    ports:
+      - "1331:5000"
+  desafio3:
+    image: "desafio3"
+    ports:
+      - "1332:22"
+  desafio4:
+    image: "desafio4"
+    privileged: true
+    ports:
+      - "1333:5000"
